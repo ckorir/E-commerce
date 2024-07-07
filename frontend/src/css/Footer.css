@@ -5,3 +5,11 @@
     justify-content: center;
     gap: 50px;
 }
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+
