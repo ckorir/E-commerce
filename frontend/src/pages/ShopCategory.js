@@ -33,9 +33,9 @@ export default function ShopCategory(props) {
 
         </div>
 
-        {/* <div className='shopcategory-loadmore'>
+        <div className='shopcategory-loadmore'>
           Explore more
-        </div> */}
+        </div>
      
     </div>
   )

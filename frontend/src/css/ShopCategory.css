@@ -30,17 +30,17 @@
     row-gap: 80px;
 }
 
-/* .shopcategory-loadmore{
+.shopcategory-loadmore{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 150px auto;
+    margin: 80px auto;
     width: 233px;
-    height: 69px;
+    height: 59px;
     border-radius: 35px;
-    background: #ededed;
-    color: #787878;
+    background: #ff9634;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-} */
+}
 
