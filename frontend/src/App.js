@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -7,12 +6,12 @@ import ShopCartegory from './pages/ShopCartegory';
 import Cart from './pages/Cart';
 import Product from './pages/Product';
 import LoginSingup from './pages/LoginSingup';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <div className="App">
       
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <BrowserRouter>
           <Navbar/>
           <Routes>
@@ -28,9 +27,8 @@ function App() {
             <Route path="/login" element={<LoginSingup/>} />
 
           </Routes>
+          <Footer/>
         </BrowserRouter>
-        
-        
         
     </div>
   );

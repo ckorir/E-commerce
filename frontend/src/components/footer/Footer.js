@@ -3,7 +3,6 @@ import '../../css/Footer.css'
 import footer_logo from '../Assets/logo_big.png'
 import instagram_icon from '../Assets/instagram_icon.png'
 import pintrest_icon from '../Assets/pintrest_icon.png'
-import twitter_icon from '../Assets/twitter_icon.png'
 import whatsapp_icon from '../Assets/whatsapp_icon.png'
 
 export default function Footer() {
