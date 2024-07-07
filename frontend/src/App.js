@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Shop from './pages/Shop';
-import ShopCartegory from './pages/ShopCartegory';
+import ShopCategory from './pages/ShopCategory';
 import Cart from './pages/Cart';
 import Product from './pages/Product';
 import LoginSingup from './pages/LoginSingup';
@@ -20,9 +20,9 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Shop/>} />
-            <Route path="/mens" element={<ShopCartegory banner={men_banner} cartegory="men"/>} />
-            <Route path="/womens" element={<ShopCartegory banner={women_banner} cartegory="women"/>} />
-            <Route path="/kids" element={<ShopCartegory banner={kids_banner} cartegory="kids"/>} />
+            <Route path="/mens" element={<ShopCategory banner={men_banner} category="men"/>} />
+            <Route path="/womens" element={<ShopCategory banner={women_banner} category="women"/>} />
+            <Route path="/kids" element={<ShopCategory banner={kids_banner} category="kid"/>} />
             <Route path="/product" element={<Product/>}>
               <Route path=":productId" element={<Product/>} />
             </Route>
