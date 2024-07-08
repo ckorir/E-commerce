@@ -1,0 +1,85 @@
+/* .loginsingup{
+    width: 100%;
+    height: 100vh;
+    background: #fcf0fd;
+    padding-top: 80px;
+}
+
+.loginsingup-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 580px;
+    margin: auto;
+    padding: 4px 60px;
+    background: rgb(255, 250, 250);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.123);
+    border-radius: 1em;
+}
+
+.loginsingup-container h1{
+    margin: 20px 0px;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+}
+
+.loginsingup-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.loginsingup-fields input{
+    height: 40px;
+    width: 100%;
+    padding: .1em;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 14px;
+    border-radius: .5em;
+}
+
+.loginsingup-container button{
+    width: 580px;
+    height: 72px;
+    color: white;
+    margin-top: 20px;
+    background: #ff7235;
+    border: none;
+    border-radius: .5em;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.loginsingup-login{
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.loginsingup-login span{
+    color: #ff7235;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.loginsingup-agree{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #5c5c5c;
+    margin-top: -1em;
+    margin-bottom: 3em;
+}
+
+.loginsingup-agree input{
+    width: 20px;
+    height: 20px;
+} */
