@@ -44,7 +44,7 @@
     border-radius: .5em;
 }
 
-/* .loginsingup-container button{
+.loginsingup-container button{
     width: 580px;
     height: 72px;
     color: white;
@@ -82,4 +82,4 @@
 .loginsingup-agree input{
     width: 20px;
     height: 20px;
-}  */
+} 
