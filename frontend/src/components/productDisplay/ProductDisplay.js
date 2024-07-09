@@ -28,7 +28,7 @@ export default function ProductDisplay(props) {
                 <img src={star_icon} alt='' />
                 <img src={star_icon} alt='' />
                 <img src={stardull_icon} alt='' />
-                <p>(4.5)</p>
+                <p>(420)</p>
             </div>
 
             <div className='productdisplay-right-price'>
