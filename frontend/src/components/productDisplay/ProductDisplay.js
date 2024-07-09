@@ -38,24 +38,23 @@ export default function ProductDisplay(props) {
                 <div className='productdisplay-right-price-new'>
                     ${product.new_price}
                 </div>
-                <div className='productdisplay-right-description'>
+            </div>
+            <div className='productdisplay-right-description'>
                 In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
-                </div>
+            </div>
 
-                <div className='productdisplay-right-size'>
-                    <h1>Select Size</h1>
-                    <div className='productdisplay-right-sizes'>
-                        <div>S</div>
-                        <div>M</div>
-                        <div>L</div>
-                        <div>XL</div>
-                        <div>XXL</div>
-                    </div>
-                    <button>Add to Cart</button>
-                    <p className='productdisplay-right-category'><span>Category: </span>Women, T-shirt, Crop Top</p>
-                    <p className='productdisplay-right-category'><span>Tags: </span>Modern, Latest</p>
+            <div className='productdisplay-right-size'>
+                <h1>Select Size</h1>
+                <div className='productdisplay-right-sizes'>
+                    <div>S</div>
+                    <div>M</div>
+                    <div>L</div>
+                    <div>XL</div>
+                    <div>XXL</div>
                 </div>
-
+                <button>Add to Cart</button>
+                <p className='productdisplay-right-category'><span>Category: </span>Women, T-shirt, Crop Top</p>
+                <p className='productdisplay-right-category'><span>Tags: </span>Modern, Latest</p>
             </div>
         </div>
 
