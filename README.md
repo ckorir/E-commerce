@@ -1,4 +1,4 @@
-# LiquorWorld
+# E-Commerse
 
 ## Screenshots
 Here are photos as to how the the website fully looks like. This will give you a better understanding of how you as a user will be interracting with the website. 
