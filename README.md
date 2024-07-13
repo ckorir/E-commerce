@@ -14,3 +14,5 @@ Here are photos as to how the the website fully looks like. This will give you a
 ![](/frontend/src/components/Assets/e-commerse%20(9).png)
 ![](/frontend/src/components/Assets/e-commerse%20(10).png)
 
+
+
