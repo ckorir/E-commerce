@@ -40,7 +40,7 @@ export default function ProductDisplay(props) {
                 </div>
             </div>
             <div className='productdisplay-right-description'>
-                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris semper porttitor volutpat. Sed vestibulum convallis sapien vitae dapibus. Nam sodales sit amet ex eget maximus.
             </div>
 
             <div className='productdisplay-right-size'>
