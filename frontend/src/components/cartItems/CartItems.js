@@ -29,7 +29,7 @@ export default function CartItems() {
                                 <p>${e.new_price}</p>
                                 <button className='cartitems-quantity'>{cartItems[e.id]}</button>
                                 <p>{e.new_price * cartItems[e.id]}</p>
-                                <img onClick={() => { removeFromCart(e.id) }} className='carticon-remove-icon' src={remove_icon} alt='' />
+                                <img onClick={() => { removeFromCart(e.id) }} src={remove_icon} alt='' />
                             </div>
                             <hr />
                         </div>
