@@ -1,4 +1,4 @@
-/* .relatedproducts{
+.relatedproducts{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,4 +23,4 @@
     display: flex;
     margin-top: 50px;
     gap: 30px;
-} */
+}
