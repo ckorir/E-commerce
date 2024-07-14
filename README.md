@@ -5,7 +5,7 @@
 
 This website is an online clothing store designed to provide users with a seamless shopping experience for the latest fashion trends.
 
-### Features
+## Features
 
 - `Product Listings` Users can browse a wide range of products categorized by different categories. Each product listing displays essential details such as name, image, and pricing information.
 
