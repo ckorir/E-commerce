@@ -4,6 +4,7 @@ import { ShopContext } from '../context/Context'
 import Breadcrumb from '../components/breadcrumbs/Breadcrumb';
 import ProductDisplay from '../components/productDisplay/ProductDisplay';
 import DescriptionBox from '../components/descriptionbox/DescriptionBox';
+import RelatedProducts from '../components/relatedProducts/RelatedProducts';
 
 export default function Product() {
 
@@ -16,6 +17,7 @@ export default function Product() {
       <Breadcrumb product={product} />
       <ProductDisplay product={product} />
       <DescriptionBox />
+      <RelatedProducts />
     </div>
   )
 }
