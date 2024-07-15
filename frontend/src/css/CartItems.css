@@ -71,3 +71,41 @@
     cursor: pointer;
 }
 
+.cartitems-promo{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cartitems-promo p{
+    color: #555;
+}
+
+.cartitems-promobox{
+    width: 404px;
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 58px;
+    background: #eaeaea;
+}
+
+.cartitems-promobox input{
+    width: 260px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cartitems-promobox button{
+    width: 140px;
+    height: 58px;
+    background: #ff7235;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
