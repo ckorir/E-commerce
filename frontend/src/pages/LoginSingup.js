@@ -8,7 +8,7 @@ export default function LoginSingup() {
         <h1>Sign Up</h1>
         <div className='loginsingup-fields'>
           <input type="text" placeholder='Username' />
-          <input type="email" placeholder='Email Adress' />
+          <input type="email" placeholder='Email Address' />
           <input type="password" placeholder='Password' />
           <button>Continue</button>
           <p className='loginsingup-login'>Already have an account?<span> Login </span></p>
