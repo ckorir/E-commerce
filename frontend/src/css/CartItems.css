@@ -1,5 +1,6 @@
 .cartitems{
     margin: 100px 170px;
+    margin-top: 60px;
 }
 
 .cartitems hr{
@@ -52,6 +53,11 @@
     flex-direction: column;
     margin-right: 200px;
     gap: 40px;
+}
+
+.cartitems-total h1{
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .cartitems-total-item{
