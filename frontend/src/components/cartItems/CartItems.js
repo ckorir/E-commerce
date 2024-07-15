@@ -60,6 +60,15 @@ export default function CartItems() {
                     </div>
                     <button className='cartitems-checkout'>Checkout</button>
                 </div>
+
+                <div className='cartitems-promo'>
+                    <p>Enter promo code if you have</p>
+                    <div className='cartitems-promobox'>
+                        <input type="text" placeholder='Enter promo code' />
+                        <button>Apply</button>
+                    </div>  
+                </div>
+                
             </div>
 
         </div>
