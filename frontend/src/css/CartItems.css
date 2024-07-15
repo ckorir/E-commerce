@@ -53,3 +53,21 @@
     margin-right: 200px;
     gap: 40px;
 }
+
+.cartitems-total-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitems-total button{
+    width: 100%;
+    height: 50px;
+    background: #ff7235;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
