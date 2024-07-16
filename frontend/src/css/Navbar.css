@@ -3,7 +3,7 @@
     /* position: sticky;
     top: 0;
     background-color: white; */
-    width: 100%;
+    width: 100vw;
     justify-content: space-around;
     padding: 16px;
     box-shadow:  0 1px 3px -2px black;
@@ -96,7 +96,7 @@
 @media (max-width: 1280px) {
 
     .navbar{
-        padding: 12px 50px;
+        padding: 12px 0px;
     }
     .nav-logo img{
         width: 40px;
@@ -124,7 +124,7 @@
 @media (max-width: 1040px){
 
     .navbar{
-        padding: 12px 30px;
+        padding: 12px 0px;
     }
     .nav-menu{
         gap: 15px;
@@ -171,6 +171,24 @@
     }
     .nav-dropdown.open{
         transform: rotate(90deg);
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .navbar{
+        width: 8px 0px;
+        gap: 0;
+    }
+    .nav-logo{
+        transform: scale(0.8);
+    }
+    .nav-menu{
+        height: 70px;
+    }
+    .nav-login-cart{
+        transform: scale(0.8);
     }
 
 }
