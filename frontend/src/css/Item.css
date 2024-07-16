@@ -6,7 +6,7 @@
 
 .item img{
     /* height: 15em; */
-    width: 14em;
+    width: 250px;
 }
 
 .item p{
@@ -41,15 +41,29 @@
 @media (max-width: 1280px){
     .item{
         width: 200px;
+        font-size: 14px;
     }
     .item img{
-        width: 12em;
+        width: 200px;
     }
     .item-price-old{
         font-size: 14px;
     }
 }
 
-/* @media (max-width: 1024px){
+@media (max-width: 1080px){
 
-} */
+    .item{
+        width: 170px;
+        font-size: 14px;
+    }
+    
+    .item img{
+        width: 170px;
+    }
+
+    .item-price-old{
+        font-size: 13px;
+    }
+
+}
