@@ -74,10 +74,10 @@
         gap: 40px 10px;
         margin: 20px 10%;
     }
-    /* .shopcategory-indexSort{
+    .shopcategory-indexSort{
         margin: 0px 100px;
         gap: 40px 5px;
-    } */
+    }
 
 }
 
@@ -86,13 +86,13 @@
     .shopcategory-products{
         margin: 20px 5%;
     }
-    /* .shopcategory-indexSort{
+    .shopcategory-indexSort{
         margin: 0px 50px;
         gap: 40px 5px;
     }
     .shopcategory-indexSort p{
         font-size: 12px;
-    } */
+    }
 }
 
 
