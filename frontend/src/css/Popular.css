@@ -27,3 +27,38 @@
     gap: 10px;
 
 }
+
+@media (max-width: 1280px){
+
+    .popular{
+        height: 80vh;
+    }
+
+}
+
+@media (max-width: 950px){
+
+    .popular{
+        height: 70vh;
+    }
+    .popular h1{
+        font-size: 30px;
+    }
+    .popular hr{
+        width: 130px;
+    }
+
+}
+
+@media (max-width: 570px){
+
+    .popular-item{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5em 1em;
+    }
+    .popular{
+        margin-bottom: 14em;
+    }
+
+}
