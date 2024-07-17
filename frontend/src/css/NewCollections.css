@@ -28,3 +28,26 @@
     gap: 30px;
 }
 
+@media (max-width: 1280px){
+
+    .new-collections{
+        height: 80vh;
+    }
+
+}
+
+@media (max-width: 950px){
+
+    .new-collections{
+        margin-bottom: 280px;
+    }
+
+    .new-collections h1{
+        font-size: 30px;
+    }
+    .new-collections hr{
+        width: 130px;
+    }
+
+}
+
