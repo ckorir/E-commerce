@@ -15,7 +15,7 @@
 
 .popular hr{
     width: 200px;
-    height: 4px;
+    height: 2px;
     border-radius: 10px;
     background: #252525;
 }
@@ -53,6 +53,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5em 1em;
+    }
+    .popular h1{
+        font-size: 25px;
     }
     .popular{
         margin-bottom: 16em;

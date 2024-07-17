@@ -66,6 +66,9 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5em 1em;
     }
+    .new-collections h1{
+        font-size: 25px;
+    }
     .new-collections{
         margin-bottom: 57em;
     }
