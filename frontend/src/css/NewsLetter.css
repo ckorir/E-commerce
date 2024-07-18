@@ -55,3 +55,77 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+@media (max-width: 1280px){
+
+    .newsletter{
+        padding: 0px 80px;
+        margin-bottom: 120px;
+        height: 50vh;
+    }
+    .newsletter h1{
+        font-size: 35px;
+    }
+    .newsletter p{
+        font-size: 18px;
+    }
+    .newsletter div{
+        height: 60px;
+    }
+    .newsletter div button{
+        width: 180px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 1024px){
+
+    .newsletter{
+        padding: 0px 80px;
+        margin-bottom: 120px;
+        height: 50vh;
+    }
+    .newsletter h1{
+        font-size: 32px;
+    }
+    .newsletter p{
+        font-size: 18px;
+    }
+    .newsletter div{
+        height: 54px;
+        width: 650px;
+    }
+    .newsletter div button{
+        width: 180px;
+        height: 54px;
+        font-size: 16px;
+    }
+
+}
+
+/* @media (max-width: 800px){
+
+    .newsletter{
+        padding: 0px 80px;
+        margin-bottom: 120px;
+        height: 50vh;
+    }
+    .newsletter h1{
+        font-size: 24px;
+    }
+    .newsletter p{
+        font-size: 14px;
+    }
+    .newsletter div{
+        height: 45px;
+        width: 500px;
+    }
+    .newsletter div button{
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+} */
