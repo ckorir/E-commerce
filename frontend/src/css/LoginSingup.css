@@ -1,8 +1,9 @@
  .loginsingup{
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     background: #fcf0fd;
     padding-top: 80px;
+    padding-bottom: 60px;
 }
 
 .loginsingup-container{
@@ -142,9 +143,9 @@
 }
 
 @media (max-width: 600px){
-    .loginsingup{
-        height: 100vh;
-    }
+    /* .loginsingup{
+        maheight: 100vh;
+    } */
 
     .loginsingup-container{
         width: auto;
