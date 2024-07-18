@@ -34,7 +34,7 @@
 
 .loginsingup-fields input{
     height: 40px;
-    width: 100%;
+    width: 96%;
     padding: .1em;
     padding-left: 20px;
     border: 1px solid #c9c9c9;
@@ -82,4 +82,105 @@
 .loginsingup-agree input{
     width: 20px;
     height: 20px;
-} 
+}
+
+@media (max-width: 1280px){
+
+    .loginsingup{
+        padding-top: 50px;
+    }
+    .loginsingup-container{
+        width: auto;
+        max-width: 500px;
+        max-height: 500px;
+        padding: 4px 40px;
+    }
+    .loginsingup-container h1{
+        margin: 10px 0px;
+        margin-top: 50px;
+        font-size: 24px;
+    }
+    .loginsingup-fields{
+        gap: 20px;
+        max-width: 500px;
+        margin-top: 20px;
+    }
+    .loginsingup-fields input{
+        height: 40px;
+        width: 93%;
+    }
+    .loginsingup-container button{
+        width: 400px;
+        height: 60px;
+    }
+    .loginsingup-login{
+        font-size: 16px;
+    }
+    .loginsingup-agree input{
+        width: 16px;
+    }
+    .loginsingup-agree{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .loginsingup-container{
+        width: auto;
+        max-width: 500px;
+        max-height: 500px;
+        padding: 4px 10px;
+    }
+    .loginsingup-container button{
+        width: 400px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px){
+    .loginsingup{
+        height: 100vh;
+    }
+
+    .loginsingup-container{
+        width: auto;
+        padding: 4px 0px;
+    }
+    .loginsingup-container h1{
+        font-size: 20px;
+    }
+    .loginsingup-container button{
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+    }
+    .loginsingup-login{
+        font-size: 14px;
+    }
+    .loginsingup-agree{
+        font-size: 12px;
+        gap: 15px;
+    }
+    .loginsingup-agree input{
+        width: 14px;
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .loginsingup-container button{
+        width: 100%;
+    }
+    .loginsingup-container{
+       margin: 0em 1em;
+    }
+    .loginsingup{
+        height: 80vh;
+    }
+
+}
