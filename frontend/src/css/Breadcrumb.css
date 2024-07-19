@@ -13,6 +13,29 @@
 
     .breadcrumb{
         margin-left: 40px;
+        font-size: 12px;
+    }
+    .breadcrumb img{
+        height: 15px;
+    }
+
+}
+
+@media (max-width: 800px){
+
+    .breadcrumb{
+        margin-left: 10px;
+        margin-right: 20px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 515px){
+
+    .breadcrumb{
+        margin: 40px 10px;
+        font-size: 10px;
     }
 
 }
