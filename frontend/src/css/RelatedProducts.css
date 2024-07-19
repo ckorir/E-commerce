@@ -43,7 +43,7 @@
 
 }
 
-/* @media (max-width: 1024px){
+@media (max-width: 1024px){
 
     .relatedproducts{
         height: 60vh;
@@ -61,7 +61,7 @@
 
 }
 
-@media (max-width: 800px){
+/* @media (max-width: 800px){
 
     .relatedproducts{
         height: 60vh;
