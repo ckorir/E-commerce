@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
+const { type } = require('os');
 
 app.use(express.json());
 app.use(cors());
@@ -43,6 +44,42 @@ app.post('/upload', upload.single('product'), (req, res) => {
         image_url: `http://localhost:${port}/images/${req.file.filename}`
     });
 });
+
+// Schema for creating products
+const products = mongoose.model('Product', {
+    id:{
+        type: Number,
+        required: true,
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    image: {
+        type: String,
+        required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    new_price: {
+        type: Number,
+        required: true
+    },
+    old_price: {
+        type: Number,
+        required: true
+    },
+    date: {
+        type: Date,
+        default: Date.now
+    },
+    available: {
+        type: Boolean,
+        default: true
+    }
+})
 
 app.listen(port, (error) => {
     if(error) {
