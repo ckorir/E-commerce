@@ -119,9 +119,9 @@ app.post('/addproduct', async (req, res) => {
 // API for deleting products
 app.post('/removeproduct', async (req, res) => {
     try {
-        const product = await Product.findOneAndDelete({id:req.body.id});
+        await Product.findOneAndDelete({id:req.body.id});
         console.log("Product removed")
-        if (!product) {
+        if (!Product) {
             return res.status(404).json({
                 success: false,
                 message: 'Product not found'
@@ -132,6 +132,18 @@ app.post('/removeproduct', async (req, res) => {
             name: req.body.name,
             message: 'Product deleted successfully'
         });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
+// API for getting all products
+app.get('/allproducts', async (req, res) => {
+    try {
+        let products = await Product.find({});
+        console.log("All products fetched");
+        res.json(products);
     } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: 'An error occurred' });
