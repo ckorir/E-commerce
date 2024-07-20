@@ -1,5 +1,4 @@
 // Intitialize Dependencies
-
 const port = 4000;
 const express = require('express');
 const app = express();
@@ -19,9 +18,21 @@ mongoose
     .catch(err => console.log(err));
 
 // API Creation
+app.get('/', (req, res) => {
+    res.send("Express app running");
+})
+
+// Image Storage Engine
+const storage = multer.diskStorage({
+    destination: './upload/images',
+    filename: (req, file, cb) => {
+        cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
+    }
+});
+
 app.listen(port, (error) => {
     if(error) {
-        console.log(error);
+        console.log("error" + error);
     } else {
         console.log("Server is running on port: " + port);
     }
