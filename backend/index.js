@@ -1,3 +1,6 @@
+// Load environment variables from .env file
+require('dotenv').config();
+
 // Intitialize Dependencies
 const port = 4000;
 const express = require('express');
@@ -14,7 +17,7 @@ app.use(cors());
 
 // Connect to MongoDB
 mongoose
-    .connect('mongodb+srv://korir:Kipkorir321@cluster0.6n9ehqk.mongodb.net/e-commerse')
+    .connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
