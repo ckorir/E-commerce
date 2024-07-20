@@ -46,7 +46,7 @@ app.post('/upload', upload.single('product'), (req, res) => {
 });
 
 // Schema for creating products
-const products = mongoose.model('Product', {
+const Product = mongoose.model('Product', {
     id:{
         type: Number,
         required: true,
@@ -81,16 +81,63 @@ const products = mongoose.model('Product', {
     }
 })
 
+// API for adding products
 app.post('/addproduct', async (req, res) => {
-    const product = new Product({
-        id: req.body.id,
-        name: req.body.name,
-        image: req.body.image,
-        category: req.body.category,
-        new_price: req.body.new_price,
-        old_price: req.body.old_price
-    });
+    try {
+        let products = await Product.find({});
+        let id;
+        if (products.length >0) {
+            let last_product_array = products.slice(-1);
+            let last_product = last_product_array[0];
+            id = last_product.id + 1;
+        } else{
+            id = 1;
+        }
+        const product = new Product({
+            id: id,
+            name: req.body.name,
+            image: req.body.image,
+            category: req.body.category,
+            new_price: req.body.new_price,
+            old_price: req.body.old_price
+        });
+        
+        console.log(product);
+        await product.save();
+        console.log("saved");
+
+        res.json({
+            success: true,
+            name: req.body.name,
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+});
+
+// API for deleting products
+app.post('/removeproduct', async (req, res) => {
+    try {
+        const product = await Product.findOneAndDelete({id:req.body.id});
+        console.log("Product removed")
+        if (!product) {
+            return res.status(404).json({
+                success: false,
+                message: 'Product not found'
+            });
+        }
+        res.json({
+            success: true,
+            name: req.body.name,
+            message: 'Product deleted successfully'
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
 })
+
 
 app.listen(port, (error) => {
     if(error) {
