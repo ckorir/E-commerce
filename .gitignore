@@ -1,5 +1,5 @@
 # dotenv environment variables file
-/backend/.env
+./backend/.env
 
 # dotenv environment variables file for development
 .env.development.local
