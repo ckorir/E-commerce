@@ -49,3 +49,15 @@
     object-fit: contain;
     margin: 10px 0px;
 }
+
+.addproduct-button{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    background: #6079ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
