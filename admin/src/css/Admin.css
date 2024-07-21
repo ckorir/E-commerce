@@ -1,0 +1,9 @@
+.admin{
+    display: flex;
+}
+
+@media (max-screeen : 800px){
+    .admin{
+        flex-direction: column;
+    }
+}
