@@ -1,9 +1,11 @@
 import React from 'react';
-import '../../css/admin.css';
+import '../../css/Admin.css';
+import Sidebar from '../../components/sidebar/Sidebar';
 
 const Admin = () => {
   return (
     <div className="admin">
+      <Sidebar />
     </div>
   );
 };
