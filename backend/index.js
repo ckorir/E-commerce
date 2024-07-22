@@ -153,6 +153,30 @@ app.get('/allproducts', async (req, res) => {
     }
 })
 
+//Schema for user creation
+const Users = mongoose.model('Users', {
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        unique: true,
+        required: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    cartData: {
+        type: Object,
+    },
+    date: {
+        type: Date,
+        default: Date.now,
+    }
+})
+
 
 app.listen(port, (error) => {
     if(error) {
