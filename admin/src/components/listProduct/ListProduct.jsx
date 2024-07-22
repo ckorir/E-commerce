@@ -32,16 +32,21 @@ const ListProduct = () => {
         <div className='listproduct-allproducts' >
           <hr/>
 
-          {allproducts.map((product,i) => (
-            <div className='listproduct-format-main listproduct-format' key={i}>
-              <img className='listproduct-product-icon' src={product.image} />
-              <p>{product.name}</p>
-              <p>{product.old_price}</p>
-              <p>{product.new_price}</p>
-              <p>{product.category}</p>
-              <img className='listproduct-remove-icon' src={cross_icon} />
-            </div>
-          ))}
+          {allproducts.map((product) => {
+            return (
+              <React.Fragment key={product.id}>
+                <div className='listproduct-format-main listproduct-format'>
+                  <img className='listproduct-product-icon' src={product.image} alt={product.name} />
+                  <p>{product.name}</p>
+                  <p>{product.old_price}</p>
+                  <p>{product.new_price}</p>
+                  <p>{product.category}</p>
+                  <img className='listproduct-remove-icon' src={cross_icon} alt="Remove" />
+                </div>
+                <hr />
+              </React.Fragment>
+            )
+          })}
         </div>
     </div>
   )
