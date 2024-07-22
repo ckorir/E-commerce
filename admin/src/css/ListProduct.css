@@ -43,6 +43,7 @@
 
 .listproduct-allproducts{
     overflow-y: auto;
+    width: 95%;
 }
 
 @media (max-width : 800px){
