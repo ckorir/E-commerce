@@ -17,6 +17,19 @@ const ListProduct = () => {
     fetchAllProducts();
   }, [])
 
+  // Remove Product
+  const removeProduct = async (id) => {
+    await fetch(`http://localhost:4000/removeproduct`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({id:id}),
+    })
+    await fetchAllProducts();
+  }
+
   return (
     <div className='listproduct'>
         <h1>All Products List</h1>
@@ -41,7 +54,7 @@ const ListProduct = () => {
                   <p>{product.old_price}</p>
                   <p>{product.new_price}</p>
                   <p>{product.category}</p>
-                  <img className='listproduct-remove-icon' src={cross_icon} alt="Remove" />
+                  <img onClick={() => removeProduct(product.id)} className='listproduct-remove-icon' src={cross_icon} alt="Remove" />
                 </div>
                 <hr />
               </React.Fragment>
