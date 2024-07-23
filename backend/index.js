@@ -219,6 +219,42 @@ app.post('/signup', async (req, res) => {
     }
 })
 
+// API for login
+app.post('/login', async (req, res) => {
+    try {
+        let user = await Users.findOne({email: req.body.email});
+        // Check for user
+        if (!user) {
+            return res.status(400).json({
+                success: false,
+                message: 'User does not exist'
+            });
+        }
+        if (user.password !== req.body.password) {
+            return res.status(400).json({
+                success: false,
+                message: 'Incorrect password'
+            });
+        }
+        // Creating Token
+        const data = {
+            user: {
+                id: user.id
+            }
+        };
+
+        const token = jwt.sign(data, 'secret_ecom');
+        res.json({
+            success: true,
+            token: token
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
+
 app.listen(port, (error) => {
     if(error) {
         console.log("error" + error);
