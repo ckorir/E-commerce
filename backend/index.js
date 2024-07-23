@@ -181,6 +181,7 @@ const Users = mongoose.model('Users', {
 app.post('/signup', async (req, res) => {
     try {
         let check = await Users.findOne({email: req.body.email});
+        // Check for user
         if (check) {
             return res.status(400).json({
                 success: false,
@@ -199,9 +200,19 @@ app.post('/signup', async (req, res) => {
             password: req.body.password,
             cartData: cart,
         });
-        
-        
-
+        await user.save();
+        // Creating Token
+        const data = {
+            user: {
+                id: user.id
+            }
+        };
+    
+        const token = jwt.sign(data, 'secret_ecom');
+        res.json({
+            success: true,
+            token: token
+        });
     }catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: 'An error occurred' });
