@@ -14,8 +14,8 @@ export default function LoginSingup() {
           <input type="email" placeholder='Email Address' />
           <input type="password" placeholder='Password' />
           <button>Continue</button>
-          {state === "Signup" ? <p className='loginsingup-login'>Already have an account?<span> Login </span></p>
-          :<p className='loginsingup-login'>Create an account<span> Signup </span></p>}
+          {state === "Signup" ? <p className='loginsingup-login'>Already have an account?<span onClick={()=>setState("Login")} > Login </span></p>
+          :<p className='loginsingup-login'>Create an account?<span onClick={()=>setState("Signup")} > Click here </span></p>}
           <div className='loginsingup-agree'>
             <input type="checkbox" name='' id='' />
             <p>I agree to the <span>Terms & Conditions</span></p>
