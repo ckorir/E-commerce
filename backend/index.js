@@ -155,7 +155,7 @@ app.get('/allproducts', async (req, res) => {
 
 //Schema for user creation
 const Users = mongoose.model('Users', {
-    name: {
+    username: {
         type: String,
         required: true,
     },
@@ -195,7 +195,7 @@ app.post('/signup', async (req, res) => {
         }
         // Users Model
         const user = new Users({
-            name: req.body.name,
+            username: req.body.username,
             email: req.body.email,
             password: req.body.password,
             cartData: cart,
