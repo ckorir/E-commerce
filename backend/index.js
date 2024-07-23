@@ -177,6 +177,36 @@ const Users = mongoose.model('Users', {
     }
 })
 
+// API for creating users
+app.post('/signup', async (req, res) => {
+    try {
+        let check = await Users.findOne({email: req.body.email});
+        if (check) {
+            return res.status(400).json({
+                success: false,
+                message: 'User already exists'
+            });
+        }
+        // Cart Data
+        let cart = {};
+        for (let i = 0; i < 300; i++) {
+            cart[1] = 0;
+        }
+        // Users Model
+        const user = new Users({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+            cartData: cart,
+        });
+        
+        
+
+    }catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
 
 app.listen(port, (error) => {
     if(error) {
