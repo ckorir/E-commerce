@@ -153,6 +153,19 @@ app.get('/allproducts', async (req, res) => {
     }
 })
 
+// API for getting new collection
+app.get('/newcollection', async (req, res) => {
+    try {
+        let products = await Product.find({available: true});
+        let newCollection = products.slice(0, 8);
+        console.log("New collection fetched");
+        res.send(newCollection);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
 //Schema for user creation
 const Users = mongoose.model('Users', {
     username: {
