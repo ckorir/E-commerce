@@ -153,6 +153,19 @@ app.get('/allproducts', async (req, res) => {
     }
 })
 
+// API for getting popular in women
+app.get('/popular', async (req, res) => {
+    try {
+        let products = await Product.find({category: "women"});
+        let popular = products.slice(0,4);
+        console.log("Popular fetched");
+        res.send(popular);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
 // API for getting new collection
 app.get('/newcollection', async (req, res) => {
     try {
