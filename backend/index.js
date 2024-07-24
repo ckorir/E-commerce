@@ -157,7 +157,7 @@ app.get('/allproducts', async (req, res) => {
 app.get('/newcollection', async (req, res) => {
     try {
         let products = await Product.find({available: true});
-        let newCollection = products.slice(0, 8);
+        let newCollection = products.slice(1).slice(-8);
         console.log("New collection fetched");
         res.send(newCollection);
     } catch (error) {
