@@ -191,7 +191,7 @@ app.post('/signup', async (req, res) => {
         // Cart Data
         let cart = {};
         for (let i = 0; i < 300; i++) {
-            cart[1] = 0;
+            cart[i] = 0;
         }
         // Users Model
         const user = new Users({
@@ -299,7 +299,10 @@ const fetchUser = async (req, res, next) => {
 // API for creating cart
 app.post('/addtocart', fetchUser, async (req, res) => {
     try{
-        console.log(req.body);
+        let userData = await Users.findOne({_id: req.user.id});
+        userData.cartData[req.body.itemId] =  +1;
+        await Users.findOneAndUpdate({_id: req.user.id},{cartData: userData.cartData});
+        res.send("Added");
     }catch(error){
         console.error(error);
         res.status(500).json({ success: false, message: 'An error occurred' });
