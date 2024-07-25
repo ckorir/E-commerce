@@ -47,9 +47,10 @@ Make sure you have the following software installed on your machine:
 
 Clone the project repository from GitHub:
 
-```bash
+```sh
 git clone https://github.com/ckorir/E-commerce.git
 cd your-repo-name
+```
 
 ## Setup
 
