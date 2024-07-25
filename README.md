@@ -2,6 +2,11 @@
 
 ![JavaScript version](https://img.shields.io/badge/logo-javascript-blue?logo=javascript)
 [![license](https://img.shields.io/badge/license-%20MIT%20-green.svg)](./LICENSE)
+![Express.js](https://img.shields.io/badge/express.js-%20%20-green.svg?logo=express)
+![MongoDB](https://img.shields.io/badge/mongodb-%20%20-green.svg?logo=mongodb)
+![React](https://img.shields.io/badge/react-%20%20-blue.svg?logo=react)
+![Node.js](https://img.shields.io/badge/node.js-%20%20-green.svg?logo=node.js)
+
 
 This website is an online clothing store designed to provide users with a seamless shopping experience for the latest fashion trends.
 
@@ -20,6 +25,12 @@ This website is an online clothing store designed to provide users with a seamle
 - `Smooth Navigation` Navigation is enhanced with smooth scrolling and intuitive user interfaces, making it easy for users to explore different sections of the website.
 
 - `User-Friendly Design` The website features a clean, user-friendly design with responsive layouts, ensuring a consistent and enjoyable experience across various devices.
+
+- **Admin Panel Integration**: An integrated admin panel allows administrators to manage products efficiently.
+
+- **MongoDB Database**: The application uses MongoDB as its database, providing a flexible, scalable, and high-performance data storage solution.
+
+
 
 
 ## Screenshots
