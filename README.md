@@ -30,7 +30,101 @@ This website is an online clothing store designed to provide users with a seamle
 
 - **MongoDB Database**: The application uses MongoDB as its database, providing a flexible, scalable, and high-performance data storage solution.
 
+## Installation
 
+Follow these steps to set up and run the project locally.
+
+### Prerequisites
+
+Make sure you have the following software installed on your machine:
+
+- [Node.js](https://nodejs.org/en/download/)
+- [npm](https://www.npmjs.com/get-npm)
+- [MongoDB](https://www.mongodb.com/try/download/community)
+- [Git](https://git-scm.com/downloads)
+
+### Clone the Repository
+
+Clone the project repository from GitHub:
+
+```bash
+git clone https://github.com/ckorir/E-commerce.git
+cd your-repo-name
+
+## Setup
+
+To setup the project follow these steps:
+
+### Backend Setup
+
+To set up the project, follow these steps:
+
+1. Navigate to backend directory:
+
+```sh
+cd backend
+
+```
+2. Install the required dependencies:
+
+```sh
+npm install
+
+```
+3. Create a .env file in the backend directory and add your MongoDB connection string:
+
+```sh
+MONGO_URI=your-mongodb-connection-string
+JWT_SECRET=your-jwt-secret
+
+```
+
+4. Start the backend server:
+
+```sh
+node . \index.js
+```
+### Frontend Setup
+
+1. Navigate to backend directory:
+
+```sh
+cd frontend
+
+```
+2. Install the required dependencies:
+
+```sh
+npm install
+
+```
+3. Start the frontend development server:
+
+```sh
+npm start
+
+```
+
+### Admin Setup
+
+1. Navigate to backend directory:
+
+```sh
+cd admin
+
+```
+2. Install the required dependencies:
+
+```sh
+npm install
+
+```
+3. Start the fadmin server:
+
+```sh
+npm run dev
+
+```
 
 
 ## Screenshots
