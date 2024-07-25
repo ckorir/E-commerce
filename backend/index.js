@@ -153,32 +153,6 @@ app.get('/allproducts', async (req, res) => {
     }
 })
 
-// API for getting popular in women
-app.get('/popular', async (req, res) => {
-    try {
-        let products = await Product.find({category: "women"});
-        let popular = products.slice(0,4);
-        console.log("Popular fetched");
-        res.send(popular);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, message: 'An error occurred' });
-    }
-})
-
-// API for getting new collection
-app.get('/newcollection', async (req, res) => {
-    try {
-        let products = await Product.find({available: true});
-        let newCollection = products.slice(1).slice(-8);
-        console.log("New collection fetched");
-        res.send(newCollection);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, message: 'An error occurred' });
-    }
-})
-
 //Schema for user creation
 const Users = mongoose.model('Users', {
     username: {
@@ -279,6 +253,60 @@ app.post('/login', async (req, res) => {
         res.status(500).json({ success: false, message: 'An error occurred' });
     }
 })
+
+// API for getting popular in women
+app.get('/popular', async (req, res) => {
+    try {
+        let products = await Product.find({category: "women"});
+        let popular = products.slice(0,4);
+        console.log("Popular fetched");
+        res.send(popular);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
+// API for getting new collection
+app.get('/newcollection', async (req, res) => {
+    try {
+        let products = await Product.find({available: true});
+        let newCollection = products.slice(1).slice(-8);
+        console.log("New collection fetched");
+        res.send(newCollection);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
+// Creating middleware to fetch user
+const fetchUser = async (req, res, next) => {
+    const token = req.header('auth-token');
+    if (!token) {
+        res.status(401).send({ error: "Please authenticate using a valid token" });
+    } else {
+        try{
+            const data = jwt.verify(token, 'secret_ecom');
+            req.user = data.user;
+            next();
+        }catch(error){
+            res.status(401).send({ error: "Please authenticate using a valid token" });
+        }
+    }
+}
+
+// API for creating cart
+app.post('/addtocart', fetchUser, async (req, res) => {
+    try{
+        console.log(req.body);
+    }catch(error){
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
+
 
 
 app.listen(port, (error) => {

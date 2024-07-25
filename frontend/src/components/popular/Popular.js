@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../../css/Popular.css'
-import data_product from '../Assets/data'
+// import data_product from '../Assets/data'
 import Item from '../item/Item'
 
 export default function Popular() {
