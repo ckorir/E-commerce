@@ -136,7 +136,7 @@ Once both the backend and frontend servers are running, you can access the appli
 
 Here are photos as to how the the website fully looks like. This will give you a better understanding of how you as a user will be interracting with the website. 
 
-<div style="overflow-x: scroll; white-space: nowrap;">
+<div style="overflow-y: scroll; white-space: nowrap;">
     <img src="/frontend/src/components/Assets/e-commerse%20(1).png" alt="Screenshot 1" style="display: inline-block; margin-right: 10px; height: 300px;">
     <img src="/frontend/src/components/Assets/e-commerse%20(2).png" alt="Screenshot 2" style="display: inline-block; margin-right: 10px; height: 300px;">
     <img src="/frontend/src/components/Assets/e-commerse%20(3).png" alt="Screenshot 3" style="display: inline-block; margin-right: 10px; height: 300px;">
