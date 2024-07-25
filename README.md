@@ -26,9 +26,9 @@ This website is an online clothing store designed to provide users with a seamle
 
 - `User-Friendly Design` The website features a clean, user-friendly design with responsive layouts, ensuring a consistent and enjoyable experience across various devices.
 
-- **Admin Panel Integration**: An integrated admin panel allows administrators to manage products efficiently.
+- `Admin Panel Integration`: An integrated admin panel allows administrators to manage products efficiently.
 
-- **MongoDB Database**: The application uses MongoDB as its database, providing a flexible, scalable, and high-performance data storage solution.
+- `MongoDB Database`: The application uses MongoDB as its database, providing a flexible, scalable, and high-performance data storage solution.
 
 ## Installation
 
