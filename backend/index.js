@@ -324,6 +324,18 @@ app.post('/removefromcart', fetchUser, async (req, res) => {
     }
 })
 
+// API for getting cartdata
+app.post('/getcartdata', fetchUser, async (req, res) => {
+    try{
+        console.log('Getting Cart Data');
+        let userData = await Users.findOne({_id: req.user.id});
+        res.json(userData.cartData);
+    }catch(error){
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
 
 
 
