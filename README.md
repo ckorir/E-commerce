@@ -127,22 +127,29 @@ npm run dev
 
 ```
 
+## Running the Application
+
+Once both the backend and frontend servers are running, you can access the application in your web browser at [`localhost:3000`](http://localhost:3000).
+
 
 ## Screenshots
+
 Here are photos as to how the the website fully looks like. This will give you a better understanding of how you as a user will be interracting with the website. 
 
-![](/frontend/src/components/Assets/e-commerse%20(1).png)
-![](/frontend/src/components/Assets/e-commerse%20(2).png)
-![](/frontend/src/components/Assets/e-commerse%20(3).png)
-![](/frontend/src/components/Assets/e-commerse%20(4).png)
-![](/frontend/src/components/Assets/e-commerse%20(5).png)
-![](/frontend/src/components/Assets/e-commerse%20(6).png)
-![](/frontend/src/components/Assets/e-commerse%20(7).png)
-![](/frontend/src/components/Assets/e-commerse%20(8).png)
-![](/frontend/src/components/Assets/e-commerse%20(9).png)
-![](/frontend/src/components/Assets/e-commerse%20(10).png)
-![](/frontend/src/components/Assets/e-commerse%20(11).png)
-![](/frontend/src/components/Assets/e-commerse%20(12).png)
+<div style="overflow-x: scroll; white-space: nowrap;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(1).png" alt="Screenshot 1" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(2).png" alt="Screenshot 2" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(3).png" alt="Screenshot 3" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(4).png" alt="Screenshot 4" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(5).png" alt="Screenshot 5" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(6).png" alt="Screenshot 6" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(7).png" alt="Screenshot 7" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(8).png" alt="Screenshot 8" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(9).png" alt="Screenshot 9" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(10).png" alt="Screenshot 10" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(11).png" alt="Screenshot 11" style="display: inline-block; margin-right: 10px; height: 300px;">
+    <img src="/frontend/src/components/Assets/e-commerse%20(12).png" alt="Screenshot 12" style="display: inline-block; margin-right: 10px; height: 300px;">
+</div>
 
 
 
