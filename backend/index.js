@@ -299,10 +299,25 @@ const fetchUser = async (req, res, next) => {
 // API for creating cart
 app.post('/addtocart', fetchUser, async (req, res) => {
     try{
+        console.log("Added",req.body.itemId);
         let userData = await Users.findOne({_id: req.user.id});
         userData.cartData[req.body.itemId] =  +1;
         await Users.findOneAndUpdate({_id: req.user.id},{cartData: userData.cartData});
         res.send("Added");
+    }catch(error){
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
+
+// API for removing from cart
+app.post('/removefromcart', fetchUser, async (req, res) => {
+    try{
+        console.log("Removed",req.body.itemId);
+        let userData = await Users.findOne({_id: req.user.id});
+        userData.cartData[req.body.itemId] -= 1;
+        await Users.findOneAndUpdate({_id: req.user.id},{cartData: userData.cartData});
+        res.send("Removed");
     }catch(error){
         console.error(error);
         res.status(500).json({ success: false, message: 'An error occurred' });
