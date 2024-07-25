@@ -21,7 +21,7 @@ mongoose
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
-// API Creation
+// Endpoint Creation
 app.get('/', (req, res) => {
     res.send("Express app running");
 })
@@ -84,7 +84,7 @@ const Product = mongoose.model('Product', {
     }
 })
 
-// API for adding products
+// Endpoint for adding products
 app.post('/addproduct', async (req, res) => {
     try {
         let products = await Product.find({});
@@ -119,7 +119,7 @@ app.post('/addproduct', async (req, res) => {
     }
 });
 
-// API for deleting products
+// Endpoint for deleting products
 app.post('/removeproduct', async (req, res) => {
     try {
         await Product.findOneAndDelete({id:req.body.id});
@@ -141,7 +141,7 @@ app.post('/removeproduct', async (req, res) => {
     }
 })
 
-// API for getting all products
+// Endpoint for getting all products
 app.get('/allproducts', async (req, res) => {
     try {
         let products = await Product.find({});
@@ -177,7 +177,7 @@ const Users = mongoose.model('Users', {
     }
 })
 
-// API for creating users
+// Endpoint for creating users
 app.post('/signup', async (req, res) => {
     try {
         let check = await Users.findOne({email: req.body.email});
@@ -219,7 +219,7 @@ app.post('/signup', async (req, res) => {
     }
 })
 
-// API for login
+// Endpoint for login
 app.post('/login', async (req, res) => {
     try {
         let user = await Users.findOne({email: req.body.email});
@@ -254,31 +254,7 @@ app.post('/login', async (req, res) => {
     }
 })
 
-// API for getting popular in women
-app.get('/popular', async (req, res) => {
-    try {
-        let products = await Product.find({category: "women"});
-        let popular = products.slice(0,4);
-        console.log("Popular fetched");
-        res.send(popular);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, message: 'An error occurred' });
-    }
-})
 
-// API for getting new collection
-app.get('/newcollection', async (req, res) => {
-    try {
-        let products = await Product.find({available: true});
-        let newCollection = products.slice(1).slice(-8);
-        console.log("New collection fetched");
-        res.send(newCollection);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, message: 'An error occurred' });
-    }
-})
 
 // Creating middleware to fetch user
 const fetchUser = async (req, res, next) => {
@@ -296,7 +272,7 @@ const fetchUser = async (req, res, next) => {
     }
 }
 
-// API for creating cart
+// Endpoint for creating cart
 app.post('/addtocart', fetchUser, async (req, res) => {
     try{
         console.log("Added",req.body.itemId);
@@ -310,7 +286,7 @@ app.post('/addtocart', fetchUser, async (req, res) => {
     }
 })
 
-// API for removing from cart
+// Endpoint for removing from cart
 app.post('/removefromcart', fetchUser, async (req, res) => {
     try{
         console.log("Removed",req.body.itemId);
@@ -324,7 +300,7 @@ app.post('/removefromcart', fetchUser, async (req, res) => {
     }
 })
 
-// API for getting cartdata
+// Endpoint for getting cartdata
 app.post('/getcartdata', fetchUser, async (req, res) => {
     try{
         console.log('Getting Cart Data');
@@ -336,7 +312,31 @@ app.post('/getcartdata', fetchUser, async (req, res) => {
     }
 })
 
+// Endpoint for getting popular in women
+app.get('/popular', async (req, res) => {
+    try {
+        let products = await Product.find({category: "women"});
+        let popular = products.slice(0,4);
+        console.log("Popular fetched");
+        res.send(popular);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
 
+// Endpoint for getting new collection
+app.get('/newcollection', async (req, res) => {
+    try {
+        let products = await Product.find({available: true});
+        let newCollection = products.slice(1).slice(-8);
+        console.log("New collection fetched");
+        res.send(newCollection);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'An error occurred' });
+    }
+})
 
 
 app.listen(port, (error) => {
